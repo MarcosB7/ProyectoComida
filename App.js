@@ -28,31 +28,32 @@ const navigator = createStackNavigator(
   }
 );
 
-const TabNavigator = createMaterialBottomTabNavigator(
-  {
-    Home: {
-      screen: HomeScreen,
-      navigationOptions: {
-        tabBarIcon: ({ tintColor }) => {
-          <View>
-            <Icon style={[{ color: tintColor }]} size={25} name={'ios-home'} />
-          </View>;
+export default createAppContainer(
+  createMaterialBottomTabNavigator(
+    {
+      Home: {
+        screen: navigator,
+        navigationOptions: {
+          tabBarIcon: ({ tintColor }) => {
+            <View>
+              <Icon style={[{ color: tintColor }]} size={25} name={'ios-home'} />
+            </View>;
+          },
         },
+        showIcon: true
+      },
+      Otros: {
+        screen: OtrosScreen,
+      },
+      Chat: {
+        screen: ChatScreen,
       },
     },
-    Chat: {
-      screen: ChatScreen,
-    },
-    Otros: {
-      screen: OtrosScreen,
-    },
-  },
-  {
-    initialRouteName: "Home",
-    activeColor: "black",
-    inactiveColor: "black",
-    barStyle: { backgroundColor: "#FFFFFF" },
-  }
+    {
+      initialRouteName: "Home",
+      activeColor: "black",
+      inactiveColor: "black",
+      barStyle: { backgroundColor: '#fff' }
+    }
+  )
 );
-
-export default createAppContainer(TabNavigator);
