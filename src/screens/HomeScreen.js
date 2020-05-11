@@ -4,12 +4,13 @@ import { Header } from "react-native-elements";
 import ProductosHome from "../components/ProductosHome";
 
 const HomeScreen = ({ navigation }) => {
+
   return (
     <View>
       <Header
         leftComponent={{ icon: "menu", color: "#fff" }}
         centerComponent={{ text: "Publicaciones", style: { color: "#fff" } }}
-        rightComponent={{ icon: "home", color: "#fff" }}
+        // rightComponent={{ icon: "home", color: "#fff" }}
       />
       <ProductosHome />
       {/* Agregar Bottom Tab Navigator */}

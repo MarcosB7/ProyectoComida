@@ -43,6 +43,7 @@ const prods = [
       "https://cocina-casera.com/wp-content/uploads/2018/03/torta-de-chocolate.jpg",
     dueno: "Martina",
     distancia: "5km",
+    // ubicacion: { latitude: -34.906112, longitude: -56.186332}
   },
   {
     id: "2",
