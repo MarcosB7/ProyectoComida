@@ -11,17 +11,17 @@ import {
 import { Tile, Button } from "react-native-elements";
 import Map from "../components/Map";
 
-
 const DetalleScreen = ({ navigation }) => {
   const prod = navigation.getParam("prod");
 
   return (
-    <View style={{ flex: 1,  }}>
+    <View style={{ flex: 1 }}>
       <ScrollView style={styles.scrollView}>
         <Tile
           imageSrc={{ uri: prod.foto }}
           title={prod.titulo}
-          contentContainerStyle={{ height: 70 }}>
+          contentContainerStyle={{ height: 70 }}
+        >
           <View style={styles.tile}>
             <Text>{prod.dueno}</Text>
             <Text>{prod.distancia}</Text>
@@ -48,12 +48,12 @@ const styles = StyleSheet.create({
     marginHorizontal: 20
   },
   scrollView: {
-  	height: 100
+    height: 100
   },
   tile: {
     flex: 1,
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "space-between"
   },
   textoBtn: {
     color: "white",
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   },
   viewBtn: {
     flex: 1,
-    justifyContent: 'flex-end',
+    justifyContent: "flex-end",
     marginBottom: 36
   },
   touchable: {
@@ -73,10 +73,9 @@ const styles = StyleSheet.create({
     // marginBottom:20,
     marginTop: 30,
     borderRadius: 10,
-    bottom: 0,
+    bottom: 0
     // top: 0,
-
-  },
+  }
 });
 
 export default DetalleScreen;
