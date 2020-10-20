@@ -7,7 +7,7 @@ export default function App() {
   return <Navigation />;
 }
 
-// borrar esta linea
+// borrar esta lineaaa
 
 /*import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
